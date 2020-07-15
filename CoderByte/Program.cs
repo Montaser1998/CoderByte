@@ -54,10 +54,12 @@ namespace CoderByte
         }
         public static int MoveAndReturnMoves(string s, string e)
         {
-            var x1 = Convert.ToInt32(e.Split(", ")[0]);
-            var x2 = Convert.ToInt32(e.Split(", ")[1]);
-            var y1 = Convert.ToInt32(s.Split(", ")[0]);
-            var y2 = Convert.ToInt32(s.Split(", ")[1]);
+            var X = e.Split(", ");
+            var Y = s.Split(", ");
+            var x1 = Convert.ToInt32(X[0]);
+            var x2 = Convert.ToInt32(X[1]);
+            var y1 = Convert.ToInt32(Y[0]);
+            var y2 = Convert.ToInt32(Y[1]);
             var num1 = x1 > y1 ? x1 - y1 : y1 - x1;
             var num2 = x2 > y2 ? x2 - y2 : y2 - x2;
             return num1 + num2;
